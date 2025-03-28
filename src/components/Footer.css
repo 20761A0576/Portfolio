@@ -1,0 +1,43 @@
+/* ===== Footer Styles ===== */
+footer {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+footer p {
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+footer p:hover {
+    color: #64ffda;
+    transform: scale(1.05);
+}
+
+/* Animated Gradient Background */
+@keyframes footerGlow {
+    0% {
+        background: linear-gradient(90deg, #0a192f, #112240);
+    }
+    50% {
+        background: linear-gradient(90deg, #112240, #0a192f);
+    }
+    100% {
+        background: linear-gradient(90deg, #0a192f, #112240);
+    }
+}
+
+footer:hover {
+    animation: footerGlow 3s infinite alternate ease-in-out;
+}

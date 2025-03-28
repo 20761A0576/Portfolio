@@ -1,0 +1,145 @@
+/* ===== Contact Page Styles ===== */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #0a192f, #1b3a6a);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 229, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: white;
+}
+
+.contact-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 229, 255, 0.4);
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00e5ff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+}
+
+.contact-text {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.9); /* Slightly darker background */
+    color: #000; /* Black text for contrast */
+    outline: none;
+}
+
+.contact-input,
+.contact-textarea {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+
+/* ✅ Placeholder Visibility Fix */
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+    color: rgba(50, 50, 50, 0.7); /* Darker gray for better visibility */
+    font-style: italic;
+}
+
+/* Glowing Focus Effect */
+.contact-input:focus,
+.contact-textarea:focus {
+    border-color: #00e5ff;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
+    transform: scale(1.02);
+}
+
+.contact-textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Animated Button */
+.contact-button {
+    background: linear-gradient(135deg, #00e5ff, #0077b6);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ripple Effect */
+.contact-button:active::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Button Hover */
+.contact-button:hover {
+    background: linear-gradient(135deg, #00c3ff, #0056b3);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Success Message */
+.success-message {
+    color: #28e29d;
+    font-weight: bold;
+    margin-top: 15px;
+    text-shadow: 0 0 10px rgba(40, 226, 157, 0.8);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    .contact-button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}

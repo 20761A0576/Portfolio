@@ -1,0 +1,161 @@
+/* Full-Screen Projects Section */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, #001f3f, #003366);
+    animation: fadeIn 1.5s ease-in-out;
+    padding: 50px 20px;
+}
+
+/* Projects Title */
+.projects-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00e6e6;
+    text-shadow: 2px 2px 12px rgba(0, 230, 230, 0.8);
+    margin-bottom: 20px;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 230, 230, 0.3);
+    border: 2px solid rgba(0, 230, 230, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Project Card Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 230, 230, 0.6);
+    border-color: #0080ff;
+}
+
+/* Project Title */
+.project-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0080ff;
+    margin-top: 15px;
+    text-shadow: 2px 2px 6px rgba(0, 128, 255, 0.8);
+}
+
+/* Project Description */
+.project-description {
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Tech Stack */
+.project-tech {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Tech Badge */
+.tech-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 14px;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: #00e6e6;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0 0 12px rgba(0, 230, 230, 0.6);
+    font-weight: bold;
+}
+
+/* Tech Badge Hover Effect */
+.tech-badge:hover {
+    transform: scale(1.2);
+    background: #0080ff;
+    color: #fff;
+    box-shadow: 0 0 18px rgba(0, 128, 255, 0.9);
+}
+
+/* Project Link */
+.project-link {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 15px;
+    background: #0080ff;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 128, 255, 0.7);
+}
+
+/* Project Link Hover Effect */
+.project-link:hover {
+    background: #00e6e6;
+    color: #001f3f;
+    box-shadow: 0 6px 18px rgba(0, 230, 230, 0.9);
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

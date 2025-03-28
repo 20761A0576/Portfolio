@@ -1,0 +1,93 @@
+/* ===== Navbar Styles ===== */
+nav {
+    background: linear-gradient(135deg, #001f3f, #003366);
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 230, 230, 0.3);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navbar Logo */
+nav h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00e6e6;
+    text-shadow: 2px 2px 8px rgba(0, 230, 230, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Logo */
+nav h1:hover {
+    transform: scale(1.1);
+    color: #0080ff;
+}
+
+/* Navbar Links */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Navbar Items */
+ul li {
+    display: inline-block;
+}
+
+/* Navbar Links */
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Hover & Active Effects */
+ul li a:hover {
+    color: #00e6e6;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(0, 230, 230, 0.8);
+}
+
+/* Active Link */
+ul li a.active {
+    color: #0080ff;
+    border-bottom: 2px solid #00e6e6;
+    text-shadow: 0 0 12px rgba(0, 230, 230, 1);
+}
+
+/* ===== Responsive Navbar (Mobile View) ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-top: 10px;
+    }
+}
+
+/* Scroll Effect */
+nav.scrolled {
+    background: #002855;
+    box-shadow: 0 4px 15px rgba(0, 230, 230, 0.4);
+}
